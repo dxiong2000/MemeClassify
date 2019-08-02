@@ -8,7 +8,7 @@ import cv2
 import os
 
 MEME_PATH = "templates"
-SCALE_SIZE = (2118, 2825)
+SCALE_SIZE = (500, 750)
 
 
 def generate():
