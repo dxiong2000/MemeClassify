@@ -4,21 +4,21 @@ generate training data using images in /templates/
 """
 
 import numpy as np
-import PIL
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
 import cv2
 import os
-import argparse
 
-chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-
-class GenerateMeme:
-
-    def __init__(self, batch_size):
-        # do stuff
+MEME_PATH = "templates"
+SCALE_SIZE = (2118, 2825)
 
 
+def generate():
 
+    meme_array = []
+    for meme in os.listdir(MEME_PATH):
+        img_array = cv2.imread(os.path.join(MEME_PATH, meme))
+        scaled = cv2.resize(img_array, SCALE_SIZE)
+
+        # stores scaled image and meme name without .jpg extension
+        meme_array.append([scaled, meme[:-4]])
+
+    return meme_array
