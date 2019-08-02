@@ -1,2 +1,2 @@
-# MemeNet
+# MemeClassify
 Meme classifier
