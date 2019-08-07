@@ -33,7 +33,6 @@ def one_nearest_neighbor(input):
     dists.sort()
     return dists
 
-
 img = cv2.imread("test1.jpg")
 img = cv2.resize(img, (500, 750))
 dists = one_nearest_neighbor(img)
