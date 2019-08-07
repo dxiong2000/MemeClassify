@@ -5,10 +5,8 @@ from generate import generate_exemplars
 from generate import generate_test_data
 import cv2
 
-
 def distance(exemplar, input):
     return mean_squared_error(exemplar, input)
-
 
 def one_nearest_neighbor(input):
     """
