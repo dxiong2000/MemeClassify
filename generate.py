@@ -14,7 +14,6 @@ import os
 MEME_PATH = "templates"
 SCALE_SIZE = (500, 750)
 
-
 def generate_exemplars():
 
     meme_array = []
@@ -27,7 +26,6 @@ def generate_exemplars():
         meme_array.append({"img": scaled, "class": meme[:-4]})
 
     return meme_array
-
 
 def generate_test_data(batch_size):
 
